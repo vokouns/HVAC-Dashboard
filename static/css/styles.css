@@ -1,0 +1,191 @@
+.kpi-card {
+  background: #0074D9;
+  color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.kpi-card h3 {
+  margin-top: 0;
+}
+
+/* ✅ FIXED: Center the KPI cards */
+#service-summary {
+  display: flex;
+  justify-content: center; /* added this line */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ✅ FIXED: Center the Free Quote KPI cards */
+#free-quote-summary {
+  display: flex;
+  justify-content: center; /* added this line */
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#free-quote-summary .kpi-card {
+  width: 280px;
+}
+
+.kpi-card.completed {
+  background: #2ECC40;
+  color: #fff;
+}
+
+.kpi-card.scheduled {
+  background: #FF851B;
+  color: #fff;
+}
+
+.kpi-card.canceled {
+  background: #FF4136;
+  color: #fff;
+}
+
+#overdue-customers-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#overdue-customers-section th,
+#overdue-customers-section td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#overdue-customers-section th {
+  background-color: #0074D9;
+  color: white;
+}
+
+.membership-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.membership-column {
+  flex: 1;
+}
+
+.membership-column table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.membership-column th,
+.membership-column td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.membership-column th {
+  background-color: #0074D9;
+  color: white;
+}
+
+.membership-column details {
+  background: #f0f8ff;
+  border: 1px solid #0074D9;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.membership-column summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  background: #0074D9;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.membership-column details[open] summary {
+  border-bottom: 1px solid #0074D9;
+}
+
+.membership-column table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.membership-column th,
+.membership-column td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.membership-column th {
+  background-color: #0074D9;
+  color: white;
+}
+
+#overdue-customers-section details {
+  background: #f0f8ff;
+  border: 1px solid #0074D9;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#overdue-customers-section summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  background: #0074D9;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+#overdue-customers-section details[open] summary {
+  border-bottom: 1px solid #0074D9;
+}
+
+#overdue-customers-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#overdue-customers-section th,
+#overdue-customers-section td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#overdue-customers-section th {
+  background-color: #0074D9;
+  color: white;
+}
+
+#service-map {
+  height: 500px;
+  margin-top: 20px;
+}
+
+.dashboard-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#revenue-chart-section,
+#map-section {
+  flex: 1;
+  min-width: 400px;
+}
+
+#revenue-area-chart {
+  width: 100%;
+  height: 400px;
+}
+
+#service-map {
+  width: 100%;
+  height: 400px;
+}

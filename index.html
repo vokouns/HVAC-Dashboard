@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="static/js/service_map.js"></script>
+  <title>HVAC Demo Dashboard</title>
+  <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>HVAC Demo Dashboard</h1>
+  </header>
+
+  <main>
+    <section id="customers-section">
+      <section id="service-calls-section">
+        <h2>Service Calls Summary</h2>
+        <div id="service-summary"></div>
+      </section>
+
+      <section id="free-quotes-section">
+        <h2>Free Quote Pipeline (YTD)</h2>
+        <div id="free-quote-summary"></div>
+      </section>
+
+    <div class="dashboard-row">
+        <section id="revenue-chart-section">
+            <h2>Monthly Revenue: Repairs vs. Maintenance</h2>
+            <canvas id="revenue-area-chart"></canvas>
+        </section>
+
+        <section id="map-section">
+            <h2>Service Calls by City</h2>
+            <div id="service-map"></div>
+        </section>
+    </div>
+
+
+      <section id="overdue-customers-section">
+        <details>
+          <summary>Customers Overdue for Service (≥ 6 months)</summary>
+          <table>
+            <thead>
+              <tr>
+                <th>Customer Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Date of Last Service</th>
+              </tr>
+            </thead>
+            <tbody id="overdue-customers-table-body"></tbody>
+          </table>
+        </details>
+      </section>
+
+      <section id="memberships-section">
+        <h2>Membership Expirations (± 6 months)</h2>
+        <div class="membership-container">
+
+          <div class="membership-column">
+            <details>
+              <summary>Recently Expired</summary>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Membership Expiration Date</th>
+                  </tr>
+                </thead>
+                <tbody id="expired-memberships-table-body"></tbody>
+              </table>
+            </details>
+          </div>
+
+          <div class="membership-column">
+            <details>
+              <summary>Expiring Soon</summary>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Membership Expiration Date</th>
+                  </tr>
+                </thead>
+                <tbody id="upcoming-memberships-table-body"></tbody>
+              </table>
+            </details>
+          </div>
+
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="static/js/kpi.js"></script>
+  <script src="static/js/free_quotes.js"></script>
+  <script src="static/js/revenue_chart.js"></script>
+  <script src="static/js/service_map.js"></script>
+  <script src="static/js/overdue_service.js"></script>
+  <script src="static/js/membership_expirations.js"></script>
+</body>
+</html>
