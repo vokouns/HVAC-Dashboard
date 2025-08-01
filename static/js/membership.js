@@ -15,12 +15,16 @@ Promise.all([
 function populateCustomerDropdown(customers) {
   const selectEl = document.getElementById("member-select");
 
-  customers.forEach(member => {
+  customers
+  .slice() // clone array so original isn’t modified
+  .sort((a, b) => a.last_name.localeCompare(b.last_name))
+  .forEach(member => {
     const option = document.createElement("option");
     option.value = member.customer_id;
-    option.textContent = `${member.first_name} ${member.last_name}`;
+    option.textContent = `${member.last_name}, ${member.first_name}`;
     selectEl.appendChild(option);
   });
+
 
   selectEl.addEventListener("change", () => {
     const selectedId = parseInt(selectEl.value);
